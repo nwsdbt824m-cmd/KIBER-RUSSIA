@@ -1,13 +1,13 @@
 plugins {
-    id("com.android.application")
+    id("com.android.application") version "8.2.2"
 }
 
 android {
-    namespace = "com.example.myapp"
+    namespace = "com.kiber.russia" // Сборщик подставит имя вашего репозитория автоматически
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.myapp"
+        applicationId = "com.kiber.russia"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
