@@ -1,16 +1,30 @@
-pluginManagement {
-    repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
-    }
-}
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
+name: Проверка и сборка APK
 
-rootProject.name = "KIBER RUSSIA"
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Настройка JDK 17
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Сборка APK с помощью Gradle
+      run: gradle assembleDebug
+
+    - name: Сохранить готовый APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: crm-rp-launcher
+        path: app/build/outputs/apk/debug/app-debug.apk
