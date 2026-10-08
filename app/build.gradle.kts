@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.kiber.russia" // Сборщик подставит имя вашего репозитория автоматически
+    namespace = "com.mylauncher"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.kiber.russia"
+        applicationId = "com.mylauncher"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
