@@ -2,9 +2,12 @@ name: Build APK
 
 on:
   push:
-    branches: [ "main" ]
+    # Звёздочка означает, что сборка запустится при пуше в ЛЮБУЮ ветку
+    branches: [ "*" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "*" ]
+  # Этот параметр добавляет кнопку для запуска сборки вручную в интерфейсе GitHub
+  workflow_dispatch:
 
 jobs:
   build:
