@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://android.com">
 
-    <!-- Разрешения для интернета (исправленный синтаксис) -->
+    <!-- Корректные разрешения для интернета -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Material.NoActionBar">
         
-        <!-- Главный экран приложения (исправленный синтаксис) -->
+        <!-- Исправленная главная активность приложения -->
         <activity 
             android:name=".MainActivity"
             android:exported="true">
