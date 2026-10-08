@@ -21,14 +21,15 @@ jobs:
         cache: gradle
 
     - name: Grant execute permission for gradlew
+      working-directory: "./KIBER RUSSIA"
       run: chmod +x gradlew
-      continue-on-error: true
 
     - name: Build with Gradle
+      working-directory: "./KIBER RUSSIA"
       run: ./gradlew assembleDebug --stacktrace
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: kiber-russia-launcher
-        path: app/build/outputs/apk/debug/app-debug.apk
+        path: "KIBER RUSSIA/app/build/outputs/apk/debug/app-debug.apk"
