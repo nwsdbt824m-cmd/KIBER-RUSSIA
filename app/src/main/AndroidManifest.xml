@@ -1,37 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://android.com"
-    package="com.example.kiber_russia"> <!-- Укажите здесь реальный ID вашего пакета, если он отличается -->
+<manifest xmlns:android="http://android.com">
 
-    <!-- Строка 5: Исправлено добавлением пространства имен android: -->
     <uses-permission android:name="android.permission.INTERNET" />
-    
-    <!-- Строка 6: Исправлено добавлением пространства имен android: -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Kiber Russia"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat"> <!-- Укажите вашу тему оформления, если она другая -->
-
-        <!-- Строка 16: Исправлено добавлением обязательного атрибута android:name -->
-        <activity
+        android:theme="@android:style/Theme.Material.NoActionBar">
+        
+        <activity 
             android:name=".MainActivity"
             android:exported="true">
-            
-            <!-- Строка 19: Исправлен сам фильтр интентов -->
             <intent-filter>
-                <!-- Строка 20: Исправлено добавлением android:name -->
                 <action android:name="android.intent.action.MAIN" />
-
-                <!-- Строка 21: Исправлено добавлением android:name -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            
         </activity>
-
     </application>
 
 </manifest>
